@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-between">
+    <span>
+        <button type="button" class="btn btn-sm btn-outline-secondary" ng-click="changeView('gridview.component.html')"><i class="fas fa-th"></i></button>
+        <button type="button" class="btn btn-sm btn-outline-secondary ml-1" ng-click="changeView('listview.component.html')"><i class="fas fa-list"></i></button>
+    </span>
+
+    <span>
+        <form class="form-inline">
+        <label class="col-form-label col-form-label-sm my-1 mr-2" for="rowLimits">Visa per sida</label>
+        <select class="custom-select custom-select-sm" id="rowLimits" ng-model="rowLimits.value" ng-options="v for v in rowLimits.values"></select>
+
+        <label class="col-form-label col-form-label-sm my-1 ml-4 mr-2" for="sortProducts">Sortera efter</label>
+        <select class="custom-select custom-select-sm" id="sortProducts" ng-model="sortProducts.value" ng-options="v for v in sortProducts.values"></select>
+        </form>
+    </span>
+</div>

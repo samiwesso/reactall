@@ -1,0 +1,15 @@
+<table class="mt-5 ml-5">
+    <tr dir-paginate="product in products | orderBy:sortProducts.value | itemsPerPage: rowLimits.value">
+        <td class="p-2"><img src="https://via.placeholder.com/{{ product.thumbnail }}" alt="{{ product.thumbnail }}"></td>
+        <td>
+            {{ product.name }} <br>
+            <small>{{ product.price }} kr </small> 
+            <div class="stars-outer pl-3">
+                <div class="stars-inner pl-3" ng-style="{ 'width': rating(product.rating) }"></div>
+            </div>
+        </td>
+        <td class="pl-5">
+            <button type="button" class="btn btn-sm btn-success">Add to Cart</button>
+        </td>
+    </tr>
+</table>

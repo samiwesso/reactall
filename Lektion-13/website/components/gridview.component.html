@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="card-deck">
+        <div class="col-sm-4" dir-paginate="product in products | orderBy:sortProducts.value | itemsPerPage: rowLimits.value">
+            <div class="card mb-5">
+                <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                
+                <img src="https://via.placeholder.com/{{ product.img }}" class="card-img-top" alt="{{ product.img }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }} </h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                        content. This content is a little bit longer.</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <div class="stars-outer">
+                        <div class="stars-inner" ng-style="{ 'width': rating(product.rating) }"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <button type="button" class="btn btn-success btn-sm">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+</div>
